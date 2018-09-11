@@ -16,7 +16,16 @@ defmodule Project1 do
     :world
   end
 
-  def main() do
-    IO.puts "Hello, word!"
+  def main(args,argss) do
+    IO.puts args
+    IO.puts argss
   end
 end
+
+@doc """
+send arguments to 
+"""
+args = System.argv()
+Supervise.start(args)
+
+
